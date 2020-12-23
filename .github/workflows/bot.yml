@@ -1,0 +1,16 @@
+name: 'Automatically Clock In =_='
+ 
+on:
+  push:
+  schedule:
+    - cron: '0 24 * * *'
+    - cron: '0 4 * * *'
+    - cron: '0 10 * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: clock-in
+        run: bash ./clock-in.sh ${{ secrets.CLOCK_IN_MOBILE }}
