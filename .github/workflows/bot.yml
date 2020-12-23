@@ -3,7 +3,7 @@ name: 'Automatically Clock In =_='
 on:
   push:
   schedule:
-    - cron: '0 24 * * *'
+    - cron: '0 0 * * *'
     - cron: '0 4 * * *'
     - cron: '0 10 * * *'
 
